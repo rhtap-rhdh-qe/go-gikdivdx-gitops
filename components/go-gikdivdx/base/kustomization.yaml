@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: go-gikdivdx
+  janus-idp.io/tekton: go-gikdivdx
+  backstage.io/kubernetes-id: go-gikdivdx
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: go-gikdivdx
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
